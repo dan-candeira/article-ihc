@@ -21,8 +21,8 @@
 /* Make sure hover state trumps all variants with a good ol'  important */
 .button:not([data-variant="dark"]):hover,
 .button:not([data-variant="dark"]):focus {
-	background-color: var(--color-dark) !important;
-	color: var(--color-light) !important;
+	background-color: var(--color-primary) !important;
+	color: var(--color-dark) !important;
 }
 
 .button[data-variant="dark"]:hover {
