@@ -1,7 +1,7 @@
 ---
 import Marquee from "./Marquee.jsx";
 import AnimationControl from "./AnimationControl.jsx";
-import skills from "../data/skills.json";
+import skills from "../data/authors.json";
 import Icon from "./icons/Icon.jsx";
 
 import { icons } from "./icons/icons";
@@ -14,37 +14,11 @@ const { current } = Astro.props;
 const isCurrent = (page: string): "page" | undefined =>
 	current == page ? "page" : undefined;
 ---
-
-<div class="pre-head">
-	<AnimationControl client:idle />
-	<Marquee>
-		{
-			skills.skills.map((item) => (
-				<div>
-					{item && item.icon ? (
-						<Icon icon={icons[item.icon]} />
-					) : null}
-					<span>{item.value}</span>
-				</div>
-			))
-		}
-	</Marquee>
-</div>
 <header class="site-head">
 	<div class="head__inner">
 		<div class="wrapper">
-			<h1>Astro excelent</h1>
+			<h1>Proposta de aplicativo para comercialização de produtos
+				de agricultura orgânica</h1>
 		</div>
 	</div>
-
-	<nav class="head__nav">
-		<ul class="wrapper" role="list">
-			<li>
-				<a href="/" aria-current={isCurrent("home")}> Home</a>
-			</li>
-			<li>
-				<a href="/posts" aria-current={isCurrent("posts")}> Posts</a>
-			</li>
-		</ul>
-	</nav>
 </header>

@@ -1,97 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-
-import { getPosts } from "../data/get-posts";
-import { getProjects } from "../data/get-projects";
-
-const posts = await getPosts();
-const projects = await getProjects();
+import { authors } from "../data/authors.json";
 ---
 
-<Layout title="Astro excelent" current="home">
+<Layout
+	title={`Proposta de aplicativo para comercialização de produtos
+		de agricultura orgânica`}
+	current="home"
+>
 	<section class="section">
 		<div class="wrapper">
 			<div class="region">
-				<h2>Posts</h2>
+				<h2>Autores</h2>
 			</div>
-			{
-				posts.length > 0 ? (
-					<>
-						<ul role="list" class="wrapper flow flow-space-xl">
-							{posts.slice(0, 4).map((post: any) => (
-								<li>
-									<div class="flow flow-space-s-m">
-										<h3>
-											<a href={post.permalink}>
-												{post.title}
-											</a>
-										</h3>
-										<time datetime={post.date}>
-											{post.date}
-										</time>
-
-										<p>
-											{post.summary ? (
-												<Fragment
-													set:html={post.summary}
-												/>
-											) : null}
-										</p>
-									</div>
-								</li>
-							))}
-						</ul>
-						<div class="link">
-							<a href="/posts">See all posts</a>
-						</div>
-					</>
-				) : (
-					<p>
-						Sorry we haven't made any posts yet.
-						<span aria-hidden="true">🥲</span>
-					</p>
-				)
-			}
-		</div>
-	</section>
-
-	<section class="section bg-secondary">
-		<div class="wrapper">
-			<div class="region">
-				<h2>Projects</h2>
-			</div>
-
-			<ul
-				role="list"
-				data-layout="50-50"
-				data-rows="masonry"
-				class="grid"
-			>
+			<ul role="list" class="flow">
 				{
-					projects.map((project) => (
-						<Card
-							liveProject={project.liveProject}
-							title={project.name}
-							body={project.description}
-							repo={project.repo}
-							cover={project.cover}
-							coverAlt={project.coverAlt}
-						/>
+					authors.map((author) => (
+						<li>
+							<div>{author.name}</div>
+							<a href={`mailto:${author.email}`}>
+								{author.email}
+							</a>
+						</li>
 					))
 				}
-				<Card
-					liveProject="https://astro.build/integrations/"
-					title="Integrations"
-					body="Supercharge your project with new frameworks and libraries."
-					repo=""
-				/>
-				<Card
-					liveProject="https://astro.build/integrations/"
-					title="Integrations"
-					body="Supercharge your project with new frameworks and libraries."
-					repo=""
-				/>
 			</ul>
 		</div>
 	</section>
