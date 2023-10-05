@@ -1,15 +1,11 @@
 .site-head {
-	border-bottom: 3px solid var(--color-dark);
-	border-top: 3px solid var(--color-dark);
+	
 }
 
 .site-head .head__inner {
 	padding-block: var(--space-s);
 }
 
-.site-head .head__nav {
-	border-top: 3px solid var(--color-dark);
-}
 
 .site-head ul {
 	display: flex;

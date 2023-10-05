@@ -2,23 +2,33 @@
 	"authors": [
 		{
 			"name": "Daniel B. Candeira",
-			"email": "dancandeira@gmail.com"
+			"email": "dancandeira@gmail.com",
+			"researchGroup": "Grupo de Pesquisa em Computação Aplicada (GPCA)",
+			"institution": "Instituto Federal de Educação, Ciência e Tecnologia de Brasília"
 		},
 		{
 			"name": "Fábio Henrique M. Oliveira",
-			"email": "fabio.oliveira@ifb.edu.br"
+			"email": "fabio.oliveira@ifb.edu.br",
+			"researchGroup": "Grupo de Pesquisa em Computação Aplicada (GPCA)",
+			"institution": "Instituto Federal de Educação, Ciência e Tecnologia de Brasília"
 		},
 		{
 			"name": "Sanderson C. M. Barbalho",
-			"email": "sandersoncesar@unb.br"
+			"email": "sandersoncesar@unb.br",
+			"researchGroup": "Grupo de Pesquisa em Inovação, Projetos e Processos (GPIPP)",
+			"institution": "Faculdade de Tecnologia, Universidade de Brasília (UnB)"
 		},
 		{
 			"name": "Rogério Dias",
-			"email": "rogerio.diasorganicos@gmail.com"
+			"email": "rogerio.diasorganicos@gmail.com",
+			"researchGroup": "",
+			"institution": "Instituto Brasil Orgânico"
 		},
 		{
 			"name": "Kleiton V. das Neves",
-			"email": "kleiton.neves@estudante.ifb.edu.br"
+			"email": "kleiton.neves@estudante.ifb.edu.br",
+			"researchGroup": "Grupo de Pesquisa em Computação Aplicada (GPCA)",
+			"institution": "Instituto Federal de Educação, Ciência e Tecnologia de Brasília"
 		}
 	]
 }

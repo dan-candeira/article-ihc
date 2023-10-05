@@ -13,11 +13,15 @@ import { authors } from "../data/authors.json";
 			<div class="region">
 				<h2>Autores</h2>
 			</div>
-			<ul role="list" class="flow">
+			<ul role="list" class="flow flow-space-2xl">
 				{
 					authors.map((author) => (
 						<li>
-							<div>{author.name}</div>
+							<h3>{author.name}</h3>
+							{author.researchGroup ? (
+								<p>{author.researchGroup}</p>
+							) : null}
+							<p>{author.institution}</p>
 							<a href={`mailto:${author.email}`}>
 								{author.email}
 							</a>
