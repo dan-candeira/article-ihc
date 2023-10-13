@@ -4,7 +4,7 @@ import { LayoutProps } from "../model/layout";
 
 export interface Props extends LayoutProps {}
 
-const { title, current } = Astro.props;
+const { title, current, displayHeader } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,20 +24,14 @@ const { title, current } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<SiteHead {current} />
+		{
+			displayHeader ? <SiteHead {current} /> : null
+		}
+		
 		<main tabindex="-1">
 			<slot />
 		</main>
-		<footer>
-			<!-- <div class="wrapper">
-				<p class="site-foot">
-					Made with <span class="vh">love</span>
-					<span aria-hidden="true">❤️</span> by &copy; Narnia Studio
-					- built with
-					<a href="https://astro.build/">Astro</a>
-				</p>
-			</div> -->
-		</footer>
+		
 		<script src="/js/prism.js" is:inline></script>
 	</body>
 </html>
